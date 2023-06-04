@@ -74,14 +74,20 @@ int main()
   int number;
   cout << "Enter The Number: ";
   cin >> number;
-  if (number != 0)
+  if (number > 0)
   {
-    cout << "The Number is: " << converter(number);
+    cout << "The Number is: " << converter(number) << endl;
   }
-  else
+  else if (number == 0)
   {
     cout << "A big ZEROOOOOOOO";
   }
+  else
+  {
+    number *= (-1);
+    cout << "The Number is: negative " << converter(number) << endl;
+  }
 
+  main ();
   return 0;
 }
